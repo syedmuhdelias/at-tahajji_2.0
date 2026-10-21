@@ -2,7 +2,6 @@
 
 A working Quran reader built with **Next.js App Router, TypeScript, React, Tailwind CSS, Lucide React, and HTML5 Audio**. The homepage uses the supplied aT-Tahajji logo, imagery and cream/forest-green design. The Quran reader is at `/quran`, with Surah Al-Masad in Dark Gold and Malay translation as its initial view. Reading progress is restored on subsequent visits.
 
-Live private site: https://my-quran-serumpun.steadyroot1.chatgpt.site
 
 ## Install and run with Next.js
 
