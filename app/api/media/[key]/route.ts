@@ -1,4 +1,4 @@
-import { getMedia } from "#site-storage";
+import { getMedia } from "@/lib/site/storage-supabase";
 export async function GET(
   _request: Request,
   { params }: { params: Promise<{ key: string }> },

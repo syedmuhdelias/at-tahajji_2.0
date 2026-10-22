@@ -44,10 +44,10 @@ export default function Privacy() {
       </p>
       <h2>Website administration</h2>
       <p>
-        The site administrator uses ChatGPT sign-in to manage homepage text,
+        The site administrator uses Supabase email and password sign-in to manage homepage text,
         contact information, teacher profiles, photos, videos and testimonials.
-        Saved website content and uploaded images are stored by this site's
-        hosting service. Replacing an image does not immediately delete the
+        Saved website content, administrator accounts and uploaded images are stored
+        in Supabase. Authentication tokens use secure, HttpOnly cookies on HTTPS. Replacing an image does not immediately delete the
         previous upload. Reading bookmarks and preferences remain on your
         device.
       </p>

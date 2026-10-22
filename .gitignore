@@ -60,14 +60,3 @@ next-env.d.ts
 
 # Standalone Next.js local content and media
 .data/
-
-# Local databases
-*.db
-*.sqlite
-*.sqlite3
-
-# Build artifacts
-*.log
-
-# OpenAI project configuration
-/.openai/

@@ -1,5 +1,5 @@
 import { adminUser, sameOrigin } from "@/lib/site/server";
-import { putMedia } from "#site-storage";
+import { putMedia } from "@/lib/site/storage-supabase";
 export const dynamic = "force-dynamic";
 export async function POST(request: Request) {
   if (!(await adminUser()))

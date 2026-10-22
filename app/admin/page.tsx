@@ -1,7 +1,7 @@
 import { AdminEditor } from "@/components/site/AdminEditor";
 import { adminUser, getContent } from "@/lib/site/server";
 import { defaultContent } from "@/lib/site/defaults";
-import { chatGPTSignInPath, chatGPTSignOutPath } from "@/app/chatgpt-auth";
+import { AdminLogin, AdminSession } from "@/components/site/AdminLogin";
 export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Site admin · My Quran",
@@ -12,16 +12,17 @@ export default async function AdminPage() {
     adminUser(),
     getContent().catch(() => null),
   ]);
+  if (!user) return <AdminLogin />;
   return (
-    <AdminEditor
+    <><AdminSession /><AdminEditor
       initial={
         document || { content: defaultContent, revision: 0, updatedAt: null }
       }
       canSave={!!user && !!document}
       displayName={user?.displayName || null}
       loadError={!document}
-      signInUrl={chatGPTSignInPath("/admin")}
-      signOutUrl={chatGPTSignOutPath("/")}
-    />
+      signInUrl="/admin"
+      signOutUrl="/api/auth/logout"
+    /></>
   );
 }

@@ -375,14 +375,7 @@ export function AdminEditor({
           View website <ExternalLink size={14} />
         </a>
         {displayName && (
-          <a
-            className="ad-logout"
-            href={signOutUrl}
-            target="_top"
-            aria-label="Sign out"
-          >
-            <LogOut size={18} />
-          </a>
+          <form action={signOutUrl} method="post"><button type="submit" className="ad-logout" aria-label="Sign out"><LogOut size={18} /></button></form>
         )}
       </header>
       <div className="ad-layout">
@@ -441,11 +434,11 @@ export function AdminEditor({
                 <strong>Sign in to manage your website</strong>
                 <p>
                   You can review the content below. Editing is available to your
-                  private site’s administrator.
+                  authorised administrator.
                 </p>
               </div>
               <a className="at-button small" href={signInUrl} target="_top">
-                Sign in with ChatGPT <ArrowUpRight size={15} />
+                Sign in with email <ArrowUpRight size={15} />
               </a>
             </div>
           )}

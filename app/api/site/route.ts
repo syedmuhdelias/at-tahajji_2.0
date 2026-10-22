@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { contentSchema } from "@/lib/site/content";
 import { adminUser, getContent, sameOrigin } from "@/lib/site/server";
-import { writeContent } from "#site-storage";
+import { writeContent } from "@/lib/site/storage-supabase";
 export const dynamic = "force-dynamic";
 export async function GET() {
   try {
